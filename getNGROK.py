@@ -55,11 +55,11 @@ def cls():
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     
 
-# ˇThis function actually gets the stats, u can put it in loop or somethingˇ
-#---------------------------------------------------------------------------#
+# ˇThis function actually gets the stats, you can use it anywhereˇ
+#-----------------------------------------------------------------#
 get_stats_n()
-#---------------------------------------------------------------------------#
-# ^This function actually gets the stats, u can put it in loop or something^ 
+#-----------------------------------------------------------------#
+# ^This function actually gets the stats, you can use it anywhere^ 
 
 
 
