@@ -3,7 +3,5 @@ Easy and fast tool written in python to get info about running ngrok as variable
 
 
 
-* Item 1
-* Item 2
-  * Item 2a
-  * Item 2b
+* 1. test
+* 2. lol
