@@ -2,6 +2,9 @@
 Easy and fast tool written in python to get info about running ngrok as variables in python.
 
 
-## How to use
-1. g
-2. d
+
+1. Item 1
+1. Item 2
+1. Item 3
+   1. Item 3a
+   1. Item 3b
