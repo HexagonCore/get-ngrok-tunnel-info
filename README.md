@@ -5,5 +5,16 @@ Easy and fast tool written in python to get info about running ngrok as variable
 
 
 ## Instalation
-* `1.` test <1.>
-* `2.` lol
+* ### Windows
+	Run `curl -LJO https://raw.githubusercontent.com/MP3Martin/get-ngrok-info/main/getNGROK.py`
+	
+* ### Linux
+	Run `wget https://raw.githubusercontent.com/MP3Martin/get-ngrok-info/main/getNGROK.py`
+### ‎
+
+## Usage
+* ### Windows
+	Run `python3 getNGROK.py`
+	
+* ### Linux
+	Run `python3 getNGROK.py`
