@@ -54,15 +54,6 @@ def cls():
     for i in range(2):
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
     
-
-# ˇThis function actually gets the stats, you can use it anywhereˇ
-#-----------------------------------------------------------------#
-get_stats_n()
-#-----------------------------------------------------------------#
-# ^This function actually gets the stats, you can use it anywhere^ 
-
-
-
 #!------------------------!
 #!    End of getNGROK     !
 #!------------------------!
@@ -71,5 +62,11 @@ get_stats_n()
 #!------------------------!
 #!   Ur code goes below   !
 #!------------------------!
+
+# ˇThis function actually gets the stats, you can use it anywhereˇ
+#-----------------------------------------------------------------#
+get_stats_n()
+#-----------------------------------------------------------------#
+# ^This function actually gets the stats, you can use it anywhere^ 
 
 print("Hello world!")
