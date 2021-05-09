@@ -83,7 +83,7 @@ def get_stats_n():
             ip = socket.gethostbyname(adress)
             delete_last_line()
             tnl_type = "TCP"
-            print("TYPE:", tnl_type)
+            print("TYPE:  ", tnl_type)
             print("ADRESS:", adress)
             print("IP:", ip)
             print("PORT:", port)
