@@ -71,6 +71,9 @@ def get_stats_n():
             err = 1
             delete_last_line()
             print("Error: wrong tunnel name configured or no tunnel is running")
+            adress = ""
+            ip = ""
+            port = ""
         if err == 0:
             ngr = ngr.split(":")
             adress = ngr[0]
@@ -87,10 +90,14 @@ def get_stats_n():
             err = 1
             delete_last_line()
             print("Error: wrong tunnel name configured or no tunnel is running")
+            adress = ""
+            ip = ""
+            port = ""
         if err == 0:
-            ip = socket.gethostbyname(ngr)
+            adress = ngr
+            ip = socket.gethostbyname(adress)
             delete_last_line()
-            print("ADRESS:", ngr)
+            print("ADRESS:", adress)
             print("IP:", ip)
     
 
