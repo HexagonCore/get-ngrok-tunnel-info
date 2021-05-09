@@ -48,6 +48,7 @@ def get_ngrok_url():
 def get_stats_n():
     global ngr
     global err
+    global tnl_type
     global ip
     global port
     global adress
@@ -81,7 +82,9 @@ def get_stats_n():
             port = ngr[1]
             ip = socket.gethostbyname(adress)
             delete_last_line()
-            print("ADRESS:  ", adress)
+            tnl_type = "TCP"
+            print("TYPE:", tnl_type)
+            print("ADRESS:", adress)
             print("IP:", ip)
             print("PORT:", port)
             
@@ -99,6 +102,8 @@ def get_stats_n():
             adress = ngr
             ip = socket.gethostbyname(adress)
             delete_last_line()
+            tnl_type = "HTTPS"
+            print("TYPE:", tnl_type)
             print("ADRESS:", adress)
             print("IP:", ip)
     
