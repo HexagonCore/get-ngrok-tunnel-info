@@ -85,8 +85,8 @@ def get_stats_n():
             tnl_type = "TCP"
             print("TYPE:  ", tnl_type)
             print("ADRESS:", adress)
-            print("IP:", ip)
-            print("PORT:", port)
+            print("IP:    ", ip)
+            print("PORT: ", port)
             
     if tcp == 0:
         try:
