@@ -25,7 +25,11 @@ def delete_last_line():
 
 def get_ngrok_url():
     url = "http://localhost:4040/api/tunnels/"
+    
+#  ---------Configurable---ˇ--------------------------------------------------------------------------------#
     tunnel_name = "command_line"
+#  ---------Configurable---^--------------------------------------------------------------------------------#
+
     time.sleep(0.01)
     delete_last_line()
     print("Getting Ngrok stats..")
