@@ -79,6 +79,7 @@ def get_stats_n():
             ngr = ngr.split(":")
             adress = ngr[0]
             port = ngr[1]
+            ip = socket.gethostbyname(adress)
             delete_last_line()
             print("ADRESS:  ", adress)
             print("IP:", ip)
