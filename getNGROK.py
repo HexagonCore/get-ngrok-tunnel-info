@@ -1,3 +1,4 @@
+import socket
 import json
 import requests
 import os 
@@ -48,14 +49,20 @@ def get_stats_n():
     global err
     global ip
     global port
+    global adress
     err = 0
     print("Getting Ngrok stats.")
     ngr = get_ngrok_url()
     time.sleep(0.01)
-    if "tcp://" in ngr:
-        tcp = 1
-    else:
-        tcp = 0
+    tcp = 5
+    try:
+        if ngr.find("tcp://") != -1:
+            tcp = 1
+        else:
+            tcp = 0
+    except:
+        delete_last_line()
+        print("Error: wrong tunnel name configured or no tunnel is running")
     
     if tcp == 1:
         try:
@@ -66,10 +73,10 @@ def get_stats_n():
             print("Error: wrong tunnel name configured or no tunnel is running")
         if err == 0:
             ngr = ngr.split(":")
-            ip = ngr[0]
+            adress = ngr[0]
             port = ngr[1]
             delete_last_line()
-            print("IP:  ", ip)
+            print("ADRESS:  ", adress)
             print("PORT:", port)
             
     if tcp == 0:
@@ -80,18 +87,21 @@ def get_stats_n():
             delete_last_line()
             print("Error: wrong tunnel name configured or no tunnel is running")
         if err == 0:
+            ip = socket.gethostbyname(ngr)
+            delete_last_line()
             print("ADRESS:", ngr)
-#            print("PRT:", port)
+            print("IP:", ip)
     
 
     
 #!------------------------!
 #!    End of getNGROK     !
-#!------------------------!
-
-
-#!------------------------!
 #!   Ur code goes below   !
+#!------------------------!
+
+
+#!------------------------!
+#!      !
 #!------------------------!
 
 # ˇThis function actually gets the stats, you can use it anywhereˇ
