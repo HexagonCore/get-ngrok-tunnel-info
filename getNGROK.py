@@ -106,7 +106,7 @@ def get_stats_n():
             tnl_type = "HTTPS"
             print("TYPE:", tnl_type)
             print("ADRESS:", adress)
-            print("IP:", ip)
+            print("IP:", ip, "\n")
     
 
     
