@@ -77,6 +77,7 @@ def get_stats_n():
             port = ngr[1]
             delete_last_line()
             print("ADRESS:  ", adress)
+            print("IP:", ip)
             print("PORT:", port)
             
     if tcp == 0:
