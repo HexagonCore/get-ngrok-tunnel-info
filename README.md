@@ -20,3 +20,5 @@ ___
 	
 * ### Linux
 	Run `python3 getNGROK.py`
+
+###U like this? Hit that ⭐!
