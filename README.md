@@ -15,7 +15,7 @@ ___
 ### ‎
 
 ## Usage
-* ### Windows
+* ### Windows / macOS
 	Run `python3 getNGROK.py`
 	
 * ### Linux
