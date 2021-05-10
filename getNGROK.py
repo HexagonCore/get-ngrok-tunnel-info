@@ -5,10 +5,10 @@ import os
 import sys
 import time
 
-#!-------------------------!
-#!    Start of getNGROK    !
-#! Please scroll to bottom !
-#!-------------------------!
+#!------------------------------!
+#! Start of getNGROK functions  !
+#!   Please scroll to bottom    !
+#!------------------------------!
 
 
 #last line deletion
@@ -77,14 +77,17 @@ def get_stats_n():
             err = 1
             delete_last_line()
             print("Error: wrong tunnel name configured or no tunnel is running")
-            adress = ""
-            ip = ""
-            port = ""
+            adress = "ERR"
+            ip = "ERR"
+            port = "ERR"
         if err == 0:
             ngr = ngr.split(":")
             adress = ngr[0]
             port = ngr[1]
-            ip = socket.gethostbyname(adress)
+            try:
+                ip = socket.gethostbyname(adress)
+            except:
+                ip = "ERR NO CONNECTION"
             delete_last_line()
             tnl_type = "TCP"
             print("TYPE:  ", tnl_type)
@@ -100,12 +103,15 @@ def get_stats_n():
             err = 1
             delete_last_line()
             print("Error: wrong tunnel name configured or no tunnel is running")
-            adress = ""
-            ip = ""
-            port = ""
+            adress = "ERR"
+            ip = "ERR"
+            port = "ERR"
         if err == 0:
             adress = ngr
-            ip = socket.gethostbyname(adress)
+            try:
+                ip = socket.gethostbyname(adress)
+            except:
+                ip = "ERR NO CONNECTION"
             delete_last_line()
             tnl_type = "HTTPS"
             print("TYPE:", tnl_type)
@@ -114,10 +120,10 @@ def get_stats_n():
     
 
     
-#!------------------------!
-#!    End of getNGROK     !
-#!   Ur code goes below   !
-#!------------------------!
+#!------------------------------!
+#!       End of getNGROK        !
+#! Ur code goes below (optional)!
+#!------------------------------!
 
 
 
