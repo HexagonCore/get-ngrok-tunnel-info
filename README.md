@@ -11,7 +11,7 @@ ___
 	Run `curl -LJO https://raw.githubusercontent.com/MP3Martin/get-ngrok-tunnel-info/main/getNGROK.py`
 	
 * ### Linux
-	Run `wget https://raw.githubusercontent.com/MP3Martin/get-ngrok-tunnel-info/main/getNGROK.py`
+	Run `wget is.gd/tunnel_info --output-document=getNGROK.py`
 ### ‎
 
 ## Usage
