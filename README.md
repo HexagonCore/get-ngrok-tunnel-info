@@ -24,6 +24,7 @@ ___
 ### ‎
 
 
-U like this? Hit that ⭐!
-
+U like this? Hit that ⭐!                    
 Use the star button as way to show me, that it works
+
+Pull requests are welcome of course
