@@ -84,12 +84,13 @@ def get_stats_n():
             ngr = ngr.split(":")
             adress = ngr[0]
             port = ngr[1]
+            tnl_type = "TCP"
             try:
                 ip = socket.gethostbyname(adress)
             except:
                 ip = "ERR NO CONNECTION"
+                tnl_type = "TCP (no connection)"
             delete_last_line()
-            tnl_type = "TCP"
             print("TYPE:  ", tnl_type)
             print("ADRESS:", adress)
             print("IP:    ", ip)
@@ -108,12 +109,13 @@ def get_stats_n():
             port = "ERR"
         if err == 0:
             adress = ngr
+            tnl_type = "HTTPS"
             try:
                 ip = socket.gethostbyname(adress)
             except:
                 ip = "ERR NO CONNECTION"
+                tnl_type = "HTTPS (no connection)"
             delete_last_line()
-            tnl_type = "HTTPS"
             print("TYPE:", tnl_type)
             print("ADRESS:", adress)
             print("IP:", ip, "\n")
