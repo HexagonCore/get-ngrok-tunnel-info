@@ -8,7 +8,7 @@ ___
 
 ## Instalation
 * ### Windows / macOS
-	Run `curl -LJO https://raw.githubusercontent.com/MP3Martin/get-ngrok-tunnel-info/main/getNGROK.py`
+	Run `curl -LJO https://raw.githubusercontent.com/MP3Martin/get-ngrok-tunnel-info/main/getNGROK.py --output getNGROK.py`
 	
 * ### Linux
 	Run `wget is.gd/tunnel_info --output-document=getNGROK.py`
