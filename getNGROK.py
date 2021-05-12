@@ -22,6 +22,9 @@ def delete_last_line():
     sys.stdout.write('\x1b[2K')
 
 
+def err_gtngr_do_not_use_for_urself():
+    delete_last_line()
+    print("Error: wrong tunnel name specified or no tunnel is running\n")
 
 def gtngr_do_not_use_for_urself():
     url = "http://localhost:4040/api/tunnels/"
@@ -69,19 +72,18 @@ def get_stats_n(tnl_nm = "command_line"):
         else:
             tcp = 0
     except:
-        delete_last_line()
-        print("Error: wrong tunnel name specified or no tunnel is running")
+        err_gtngr_do_not_use_for_urself()
     
     if tcp == 1:
         try:
             ngr = ngr.replace("tcp://", "")
         except:
             err = 1
-            delete_last_line()
-            print("Error: wrong tunnel name specified or no tunnel is running")
+            err_gtngr_do_not_use_for_urself()
             adress = "ERR"
             ip = "ERR"
             port = "ERR"
+            tnl_type = "ERR"
         if err == 0:
             ngr = ngr.split(":")
             adress = ngr[0]
@@ -105,11 +107,11 @@ def get_stats_n(tnl_nm = "command_line"):
             ngr = ngr.replace("https://", "")
         except:
             err = 1
-            delete_last_line()
-            print("Error: wrong tunnel name specified or no tunnel is running")
+            err_gtngr_do_not_use_for_urself()
             adress = "ERR"
             ip = "ERR"
             port = "ERR"
+            tnl_type = "ERR"
         if err == 0:
             adress = ngr
             tnl_type = "HTTPS"
