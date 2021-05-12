@@ -1,4 +1,5 @@
 
+
 # Get ngrok tunnel info
 Easy and fast tool written in **python 3** to get info about running ngrok tunnel as variables in python. Supports **HTTPS** and **TCP**
 ___
@@ -21,6 +22,12 @@ ___
 * ### Linux
 	Run `python3 getNGROK.py`
 
+## Instalation
+* ### Windows / macOS
+	Run `curl -LJO https://raw.githubusercontent.com/MP3Martin/get-ngrok-tunnel-info/main/getNGROK.py --output getNGROK.py`
+	
+* ### Linux
+	Run `wget is.gd/tunnel_info --output-document=getNGROK.py`
 ### ‎
 
 
