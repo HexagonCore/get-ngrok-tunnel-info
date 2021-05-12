@@ -140,4 +140,7 @@ get_stats_n("command_line")
 #-----------------------------------------------------------------#
 # ^This function actually gets the stats, you can use it anywhere^ 
 
+#     WHAT IS THE "command_line" PARAMETER? Check this out https://ngrok.com/docs#tunnel-definitions
+#     IF YOU DO NOT USE IT, LEAVE IT BLANK: get_stats_n()
+
 print("Hello world!")
