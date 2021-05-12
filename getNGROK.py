@@ -120,9 +120,9 @@ def get_stats_n(tnl_nm = "command_line"):
                 tnl_type = "HTTPS (no connection)"
             delete_last_line()
             print("NAME:  ", par_tnl)
-            print("TYPE:", tnl_type)
+            print("TYPE:  ", tnl_type)
             print("ADRESS:", adress)
-            print("IP:", ip, "\n")
+            print("IP:    ", ip, "\n")
     
 
     
