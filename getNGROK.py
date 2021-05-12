@@ -23,7 +23,7 @@ def delete_last_line():
 
 
 
-def get_ngrok_url():
+def gtngr():
     url = "http://localhost:4040/api/tunnels/"
     
 #  ---------Configurable---ˇ--------------------------------------------------------------------------------#
@@ -58,7 +58,7 @@ def get_stats_n():
     global adress
     err = 0
     print("Getting Ngrok stats.")
-    ngr = get_ngrok_url()
+    ngr = gtngr()
     time.sleep(0.01)
     tcp = 5
     try:
@@ -95,7 +95,7 @@ def get_stats_n():
             print("ADRESS:", adress)
             print("IP:    ", ip)
             print("PORT:  ", port)
-            print("\n")
+            print("")
             
     if tcp == 0:
         try:
@@ -126,7 +126,6 @@ def get_stats_n():
 #!       End of getNGROK        !
 #! Ur code goes below (optional)!
 #!------------------------------!
-
 
 
 # ˇThis function actually gets the stats, you can use it anywhereˇ
