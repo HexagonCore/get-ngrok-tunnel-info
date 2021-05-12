@@ -93,6 +93,7 @@ def get_stats_n(tnl_nm = "command_line"):
                 ip = "ERR NO CONNECTION"
                 tnl_type = "TCP (no connection)"
             delete_last_line()
+            print("NAME: ", par_tnl)
             print("TYPE:  ", tnl_type)
             print("ADRESS:", adress)
             print("IP:    ", ip)
@@ -118,6 +119,7 @@ def get_stats_n(tnl_nm = "command_line"):
                 ip = "ERR NO CONNECTION"
                 tnl_type = "HTTPS (no connection)"
             delete_last_line()
+            print("NAME: ", par_tnl)
             print("TYPE:", tnl_type)
             print("ADRESS:", adress)
             print("IP:", ip, "\n")
