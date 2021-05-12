@@ -28,7 +28,7 @@ ___
 ## FAQ
 * ### Error: wrong tunnel name specified or no tunnel is running
 	Check if ngrok is really running on your computer.
-	If yes, check if you have correctly specified [tunnel name](https://ngrok.com/docs#tunnel-definitions){:target="_blank"}. You need to specify it only, if you are using config file to specify tunnel preset
+	If yes, check if you have correctly specified [tunnel name](https://ngrok.com/docs#tunnel-definitions). You need to specify it only, if you are using config file to specify tunnel preset
 	
 * ### Linux
 	Run `wget is.gd/tunnel_info --output-document=getNGROK.py`
