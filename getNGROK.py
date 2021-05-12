@@ -23,7 +23,7 @@ def delete_last_line():
 
 
 
-def gtngr():
+def gtngr_do_not_use_for_urself():
     url = "http://localhost:4040/api/tunnels/"
     
 #  ---------Configurable---ˇ--------------------------------------------------------------------------------#
@@ -32,7 +32,7 @@ def gtngr():
 
     time.sleep(0.01)
     delete_last_line()
-    print("Getting Ngrok stats..")
+    print('Getting Ngrok stats from tunnel "{}"..'.format(par_tnl))
     try:
         res = requests.get(url)
         res_unicode = res.content.decode("utf-8")
@@ -40,7 +40,7 @@ def gtngr():
         for i in res_json["tunnels"]:
             if i['name'] == tunnel_name:
                 delete_last_line()
-                print("Getting Ngrok stats...")
+                print('Getting Ngrok stats from tunnel "{}"...'.format(par_tnl))
                 return i['public_url']
                 break
     except:
@@ -49,16 +49,18 @@ def gtngr():
 
 
 
-def get_stats_n():
+def get_stats_n(tnl_nm = "command_line"):
     global ngr
     global err
     global tnl_type
     global ip
     global port
     global adress
+    global par_tnl
+    par_tnl = tnl_nm
     err = 0
-    print("Getting Ngrok stats.")
-    ngr = gtngr()
+    print('Getting Ngrok stats from tunnel "{}".'.format(par_tnl))
+    ngr = gtngr_do_not_use_for_urself()
     time.sleep(0.01)
     tcp = 5
     try:
@@ -68,7 +70,7 @@ def get_stats_n():
             tcp = 0
     except:
         delete_last_line()
-        print("Error: wrong tunnel name configured or no tunnel is running")
+        print("Error: wrong tunnel name specified or no tunnel is running")
     
     if tcp == 1:
         try:
@@ -76,7 +78,7 @@ def get_stats_n():
         except:
             err = 1
             delete_last_line()
-            print("Error: wrong tunnel name configured or no tunnel is running")
+            print("Error: wrong tunnel name specified or no tunnel is running")
             adress = "ERR"
             ip = "ERR"
             port = "ERR"
@@ -103,7 +105,7 @@ def get_stats_n():
         except:
             err = 1
             delete_last_line()
-            print("Error: wrong tunnel name configured or no tunnel is running")
+            print("Error: wrong tunnel name specified or no tunnel is running")
             adress = "ERR"
             ip = "ERR"
             port = "ERR"
@@ -130,7 +132,7 @@ def get_stats_n():
 
 # ˇThis function actually gets the stats, you can use it anywhereˇ
 #-----------------------------------------------------------------#
-get_stats_n()
+get_stats_n("command_line")
 #-----------------------------------------------------------------#
 # ^This function actually gets the stats, you can use it anywhere^ 
 
