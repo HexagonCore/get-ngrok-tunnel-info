@@ -31,7 +31,7 @@ ___
 	If yes, check if you have correctly specified [tunnel name](https://ngrok.com/docs#tunnel-definitions). You need to specify it only, if you are using [config file](https://ngrok.com/docs#config-default-location) to specify tunnel preset. If you've checked everything, but it's still not working, contact [me on Discord](https://discord.gg/agREa6Dh3r) or [open issue](https://github.com/MP3Martin/get-ngrok-tunnel-info/issues/new/choose).
 	
 * ### Linux
-	Run `wget is.gd/tunnel_info --output-document=getNGROK.py`
+	Run `wget https://raw.githubusercontent.com/MP3Martin/get-ngrok-tunnel-info/main/getNGROK.py`
 ### ‎
 
 
