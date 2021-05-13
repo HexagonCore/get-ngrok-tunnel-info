@@ -11,10 +11,10 @@ ___
 
 ## Instalation
 * ### Windows / macOS
-	Run `curl -LJO https://raw.githubusercontent.com/MP3Martin/get-ngrok-tunnel-info/main/getNGROK.py --output getNGROK.py`
+	Run `curl -LJO https://raw.githubusercontent.com/TechnoLabDevelopment/get-ngrok-tunnel-info/main/getNGROK.py --output getNGROK.py`
 	
 * ### Linux
-	Run `wget https://raw.githubusercontent.com/MP3Martin/get-ngrok-tunnel-info/main/getNGROK.py`
+	Run `wget https://raw.githubusercontent.com/TechnoLabDevelopment/get-ngrok-tunnel-info/main/getNGROK.py`
 ### ‎
 
 ## Usage
@@ -28,10 +28,10 @@ ___
 ## FAQ
 * ### Error: wrong tunnel name specified or no tunnel is running
 	Check if ngrok is really running on your computer.
-	If yes, check if you have correctly specified [tunnel name](https://ngrok.com/docs#tunnel-definitions). You need to specify it only, if you are using [config file](https://ngrok.com/docs#config-default-location) to specify tunnel preset. If you've checked everything, but it's still not working, contact [me on Discord](https://discord.gg/agREa6Dh3r) or [open issue](https://github.com/MP3Martin/get-ngrok-tunnel-info/issues/new/choose).
+	If yes, check if you have correctly specified [tunnel name](https://ngrok.com/docs#tunnel-definitions). You need to specify it only, if you are using [config file](https://ngrok.com/docs#config-default-location) to specify tunnel preset. If you've checked everything, but it's still not working, contact [us on Discord](https://discord.gg/agREa6Dh3r) or [open issue](https://github.com/TechnoLabDevelopment/get-ngrok-tunnel-info/issues/new/choose).
 ### ‎
 
 
 Do you like this? Hit that ⭐!                                
-Use the star button as way to show me, that it works              
+Use the star button as way to show us, that it works              
 Fork and pull requests are welcome of course
