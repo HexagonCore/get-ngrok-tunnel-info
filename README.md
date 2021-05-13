@@ -1,5 +1,5 @@
 
-g
+
 
 
 # Get ngrok tunnel info
