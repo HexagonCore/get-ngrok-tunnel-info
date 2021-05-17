@@ -13,7 +13,7 @@ import time
 lvers = "1.0.7"
 
 
-def checkver:
+def checkver():
     packagenm = 'ngrok_info'  # replace with the package you want to check
     responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
     latest_version = responseinfl.json()['info']['version']
