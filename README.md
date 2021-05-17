@@ -23,6 +23,15 @@ ___
 		               `ngrok-info.get`
 
 ### ‎
+
+## Uninstall
+* ### Windows / macOS
+	Run `python3 -m pip uninstall ngrok-info`
+	
+* ### Linux
+	Run `python3 -m pip uninstall ngrok-info`
+
+### ‎
 ## FAQ
 * ### Error: wrong tunnel name specified or no tunnel is running
 	Check if ngrok is really running on your computer.
