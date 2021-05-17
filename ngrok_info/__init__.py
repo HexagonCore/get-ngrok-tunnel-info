@@ -7,7 +7,7 @@ import time
 
 #!------------------------------!
 #! Start of getNGROK functions  !
-#!   Please scroll to bottom    !
+#!                              !
 #!------------------------------!
 
 
@@ -29,9 +29,6 @@ def err_gtngr_do_not_use_for_urself():
 def gtngr_do_not_use_for_urself():
     url = "http://localhost:4040/api/tunnels/"
     
-#  ---------Configurable---ˇ--------------------------------------------------------------------------------#
-    tunnel_name = "command_line"
-#  ---------Configurable---^--------------------------------------------------------------------------------#
 
     time.sleep(0.01)
     delete_last_line()
@@ -52,7 +49,7 @@ def gtngr_do_not_use_for_urself():
 
 
 
-def get_stats_n(tnl_nm = "command_line"):
+def get(tnl_nm = "command_line"):
     global ngr
     global err
     global tnl_type
@@ -130,17 +127,7 @@ def get_stats_n(tnl_nm = "command_line"):
     
 #!------------------------------!
 #!       End of getNGROK        !
-#! Ur code goes below (optional)!
+#!                              !
 #!------------------------------!
 
-
-# ˇThis function actually gets the stats, you can use it anywhereˇ
-#-----------------------------------------------------------------#
-get_stats_n("command_line")
-#-----------------------------------------------------------------#
-# ^This function actually gets the stats, you can use it anywhere^ 
-
-#     WHAT IS THE "command_line" PARAMETER? Check this out https://ngrok.com/docs#tunnel-definitions
-#     IF YOU DO NOT USE IT, LEAVE IT BLANK: get_stats_n()
-
-print("Hello world!")
+print("lol")

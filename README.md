@@ -1,28 +1,26 @@
 
 
-# **Pip package comming soon! Not recommended to use this**
-
 # Get ngrok tunnel info
-Easy and fast tool written in **python 3** to get info about running ngrok tunnel as variables in python. Supports **HTTPS** and **TCP**
-___
-**⚠** Use this as **base code**, if you already started project, paste it beetween importing packages and your already existing code **⚠**
+Easy and fast tool written in **python 3** to get info about running ngrok tunnel. Supports **HTTPS** and **TCP**
 ___
 ### ‎
 
 ## Instalation
 * ### Windows / macOS
-	Run `curl -LJO https://raw.githubusercontent.com/HexagonCore/get-ngrok-tunnel-info/main/getNGROK.py --output getNGROK.py`
+	Run `pip3 install ngrok-info`
 	
 * ### Linux
-	Run `wget https://raw.githubusercontent.com/HexagonCore/get-ngrok-tunnel-info/main/getNGROK.py`
+	Run `pip3 install ngrok-info`
 ### ‎
 
 ## Usage
 * ### Windows / macOS
-	Run `python3 getNGROK.py`
+	Add to your script `import ngrok-info`
+	                   `ngrok-info.get`
 	
 * ### Linux
-	Run `python3 getNGROK.py`
+	Add to your script `import ngrok-info`
+		               `ngrok-info.get`
 
 ### ‎
 ## FAQ
