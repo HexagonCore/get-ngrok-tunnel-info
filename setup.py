@@ -14,8 +14,6 @@ setup(name='ngrok_info',
           'markdown',
           'socket',
           'json',
-          'requests',
-          'os',
-          'sys'
+          'requests'
       ],
       zip_safe=False)
