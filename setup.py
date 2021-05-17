@@ -12,7 +12,6 @@ setup(name='ngrok_info',
       packages=['ngrok_info'],
       install_requires=[
           'markdown',
-          'json',
           'requests'
       ],
       zip_safe=False)
