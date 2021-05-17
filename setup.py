@@ -16,7 +16,6 @@ setup(name='ngrok_info',
           'json',
           'requests',
           'os',
-          'sys',
-          'time'
+          'sys'
       ],
       zip_safe=False)
