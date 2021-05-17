@@ -1,6 +1,6 @@
 
 
-
+# **Pip package comming soon! Not recommended to use this**
 
 # Get ngrok tunnel info
 Easy and fast tool written in **python 3** to get info about running ngrok tunnel as variables in python. Supports **HTTPS** and **TCP**
