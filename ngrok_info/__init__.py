@@ -10,7 +10,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.0.7"
+lvers = "1.0.9"
 
 
 def checkver():
