@@ -11,6 +11,15 @@ import time
 #!------------------------------!
 
 
+def checkver:
+    packagenm = 'ngrok_info'  # replace with the package you want to check
+    responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
+    latest_version = responseinfl.json()['info']['version']
+    if latest_version != 1.0.6:
+        print("You are not using latest version, run 'python3 -m pip install ngrok_info'")
+
+checkver()
+
 #last line deletion
 def delete_last_line():
     "Use this function to delete the last line in the STDOUT"
@@ -130,4 +139,3 @@ def get(tnl_nm = "command_line"):
 #!                              !
 #!------------------------------!
 
-print("lol")

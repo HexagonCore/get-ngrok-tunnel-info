@@ -7,19 +7,19 @@ ___
 
 ## Instalation
 * ### Windows / macOS
-	Run `pip3 install ngrok-info`
+	Run `python3 -m pip install ngrok_info`
 	
 * ### Linux
-	Run `pip3 install ngrok-info`
+	Run `python3 -m pip install ngrok_info`
 ### ‎
 
 ## Usage
 * ### Windows / macOS
-	Add to your script `import ngrok-info`
+	Add to your script `import ngrok_info`
 	                   `ngrok-info.get`
 	
 * ### Linux
-	Add to your script `import ngrok-info`
+	Add to your script `import ngrok_info`
 		               `ngrok-info.get`
 
 ### ‎
