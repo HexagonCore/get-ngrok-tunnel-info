@@ -10,7 +10,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.0.13"
+lvers = "1.0.14"
 
 
 def checkver():
@@ -38,7 +38,6 @@ def gtngr_do_not_use_for_urself():
     print(tunnel_name)
     
 
-    time.sleep(0.01)
     delete_last_line()
     try:
         res = requests.get(url)
@@ -67,7 +66,6 @@ def get(tnl_nm = "command_line"):
     err = 0
     print('Getting Ngrok stats from tunnel "{}"..'.format(par_tnl))
     ngr = gtngr_do_not_use_for_urself()
-    time.sleep(0.01)
     tcp = 5
     try:
         if ngr.find("tcp://") != -1:
