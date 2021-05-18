@@ -1,3 +1,7 @@
+## -------------------------------------------------- ##
+##    So you are checking my code? Have a nice day!   ##
+##    Check out http://is.gd/duhovavoda               ##
+## -------------------------------------------------- ##
 import socket
 import json
 import requests
@@ -10,7 +14,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.0.17"
+lvers = "1.1.0"
 
 
 def checkver():
@@ -55,6 +59,7 @@ def get(tnl_nm = "command_line"):
     global ngr
     global err
     global tnl_type
+    global tnl_name
     global ip
     global port
     global adress
@@ -93,12 +98,14 @@ def get(tnl_nm = "command_line"):
                 ip = "ERR NO CONNECTION"
                 tnl_type = "TCP (no connection)"
             delete_last_line()
+            tnl_name = par_tnl
             print("NAME:  ", par_tnl)
             print("TYPE:  ", tnl_type)
             print("ADRESS:", adress)
             print("IP:    ", ip)
             print("PORT:  ", port)
-            
+            print("")
+            print("Variables, you can acess in your code and are for TCP are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip', 'ngrok_info.port'")
     if tcp == 0:
         try:
             ngr = ngr.replace("https://", "")
@@ -118,10 +125,14 @@ def get(tnl_nm = "command_line"):
                 ip = "ERR NO CONNECTION"
                 tnl_type = "HTTPS (no connection)"
             delete_last_line()
+            tnl_name = par_tnl
+            port = NONE
             print("NAME:  ", par_tnl)
             print("TYPE:  ", tnl_type)
             print("ADRESS:", adress)
             print("IP:    ", ip, "\n")
+            print("")
+            print("Variables, you can acess in your code and are for TCP are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip'")
     
 
     
