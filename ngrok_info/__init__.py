@@ -10,11 +10,11 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.0.11"
+lvers = "1.0.12"
 
 
 def checkver():
-    packagenm = 'ngrok_info'  # replace with the package you want to check
+    packagenm = 'ngrok_info'
     responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
     latest_version = responseinfl.json()['info']['version']
     if latest_version != lvers:
@@ -24,14 +24,7 @@ checkver()
 
 #last line deletion
 def delete_last_line():
-    "Use this function to delete the last line in the STDOUT"
-
-    #cursor up one line
-    sys.stdout.write('\x1b[1A')
-
-    #delete last line
-    sys.stdout.write('\x1b[2K')
-
+    pass
 
 def err_gtngr_do_not_use_for_urself():
     delete_last_line()
@@ -39,6 +32,10 @@ def err_gtngr_do_not_use_for_urself():
 
 def gtngr_do_not_use_for_urself():
     url = "http://localhost:4040/api/tunnels/"
+    tunnel_name = par_tnl
+    print(tunnel_name)
+    print(tunnel_name)
+    print(tunnel_name)
     
 
     time.sleep(0.01)
