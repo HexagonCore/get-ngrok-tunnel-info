@@ -10,7 +10,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.0.12"
+lvers = "1.0.13"
 
 
 def checkver():
@@ -40,7 +40,6 @@ def gtngr_do_not_use_for_urself():
 
     time.sleep(0.01)
     delete_last_line()
-    print('Getting Ngrok stats from tunnel "{}"..'.format(par_tnl))
     try:
         res = requests.get(url)
         res_unicode = res.content.decode("utf-8")
@@ -48,7 +47,6 @@ def gtngr_do_not_use_for_urself():
         for i in res_json["tunnels"]:
             if i['name'] == tunnel_name:
                 delete_last_line()
-                print('Getting Ngrok stats from tunnel "{}"...'.format(par_tnl))
                 return i['public_url']
                 break
     except:
@@ -67,7 +65,7 @@ def get(tnl_nm = "command_line"):
     global par_tnl
     par_tnl = tnl_nm
     err = 0
-    print('Getting Ngrok stats from tunnel "{}".'.format(par_tnl))
+    print('Getting Ngrok stats from tunnel "{}"..'.format(par_tnl))
     ngr = gtngr_do_not_use_for_urself()
     time.sleep(0.01)
     tcp = 5
