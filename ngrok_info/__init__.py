@@ -132,7 +132,7 @@ def get(tnl_nm = "command_line"):
             print("ADRESS:", adress)
             print("IP:    ", ip, "\n")
             print("")
-            print("Variables, you can acess in your code and are for TCP are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip'")
+            print("Variables, you can acess in your code and are for HTTPS are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip'")
     
 
     
