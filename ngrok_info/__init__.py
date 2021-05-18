@@ -14,7 +14,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.1"
+lvers = "1.1.2"
 
 
 def checkver():
@@ -22,7 +22,7 @@ def checkver():
     responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
     latest_version = responseinfl.json()['info']['version']
     if latest_version != lvers:
-        print("You are not using latest version, run 'python3 -m pip install --upgrade ngrok_info'")
+        print("You are not using latest version, run 'python3 -m pip install --upgrade ngrok_info' three times")
 
 checkver()
 
@@ -33,7 +33,13 @@ def delete_last_line():
 def err_gtngr_do_not_use_for_urself():
     delete_last_line()
     print("Error: wrong tunnel name specified or no tunnel is running\n")
-
+    tnl_name = ERR
+    par_tnl = ERR
+    tnl_type = ERR
+    port = ERR
+    ip = ERR
+    adress = ERR
+    
 def gtngr_do_not_use_for_urself():
     url = "http://localhost:4040/api/tunnels/"
     tunnel_name = par_tnl
