@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='ngrok_info',
-      version='1.0.10',
+      version='1.0.11',
       description='Easy and fast tool written in python 3 to get info about running ngrok tunnel',
       long_description=open('README.md').read(),
       long_description_content_type='text/markdown',

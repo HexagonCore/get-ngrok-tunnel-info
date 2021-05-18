@@ -10,7 +10,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.0.10"
+lvers = "1.0.11"
 
 
 def checkver():
@@ -18,7 +18,7 @@ def checkver():
     responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
     latest_version = responseinfl.json()['info']['version']
     if latest_version != lvers:
-        print("You are not using latest version, run 'python3 -m pip install ngrok_info --upgrade'")
+        print("You are not using latest version, run 'python3 -m pip install --upgrade ngrok_info'")
 
 checkver()
 
@@ -44,15 +44,18 @@ def gtngr_do_not_use_for_urself():
     time.sleep(0.01)
     delete_last_line()
     print('Getting Ngrok stats from tunnel "{}"..'.format(par_tnl))
-    res = requests.get(url)
-    res_unicode = res.content.decode("utf-8")
-    res_json = json.loads(res_unicode)
-    for i in res_json["tunnels"]:
-        if i['name'] == tunnel_name:
-            delete_last_line()
-            print('Getting Ngrok stats from tunnel "{}"...'.format(par_tnl))
-            return i['public_url']
-            break
+    try:
+        res = requests.get(url)
+        res_unicode = res.content.decode("utf-8")
+        res_json = json.loads(res_unicode)
+        for i in res_json["tunnels"]:
+            if i['name'] == tunnel_name:
+                delete_last_line()
+                print('Getting Ngrok stats from tunnel "{}"...'.format(par_tnl))
+                return i['public_url']
+                break
+    except:
+        err = 1
 
 
 
@@ -71,19 +74,34 @@ def get(tnl_nm = "command_line"):
     ngr = gtngr_do_not_use_for_urself()
     time.sleep(0.01)
     tcp = 5
-    if ngr.find("tcp://") != -1:
-        tcp = 1
-    else:
-        tcp = 0
+    try:
+        if ngr.find("tcp://") != -1:
+            tcp = 1
+        else:
+            tcp = 0
+    except:
+        err_gtngr_do_not_use_for_urself()
     
     if tcp == 1:
-        ngr = ngr.replace("tcp://", "")
+        try:
+            ngr = ngr.replace("tcp://", "")
+        except:
+            err = 1
+            err_gtngr_do_not_use_for_urself()
+            adress = "ERR"
+            ip = "ERR"
+            port = "ERR"
+            tnl_type = "ERR"
         if err == 0:
             ngr = ngr.split(":")
             adress = ngr[0]
             port = ngr[1]
             tnl_type = "TCP"
-            ip = socket.gethostbyname(adress)
+            try:
+                ip = socket.gethostbyname(adress)
+            except:
+                ip = "ERR NO CONNECTION"
+                tnl_type = "TCP (no connection)"
             delete_last_line()
             print("NAME:  ", par_tnl)
             print("TYPE:  ", tnl_type)
@@ -93,11 +111,23 @@ def get(tnl_nm = "command_line"):
             print("")
             
     if tcp == 0:
-        ngr = ngr.replace("https://", "")
+        try:
+            ngr = ngr.replace("https://", "")
+        except:
+            err = 1
+            err_gtngr_do_not_use_for_urself()
+            adress = "ERR"
+            ip = "ERR"
+            port = "ERR"
+            tnl_type = "ERR"
         if err == 0:
             adress = ngr
             tnl_type = "HTTPS"
-            ip = socket.gethostbyname(adress)
+            try:
+                ip = socket.gethostbyname(adress)
+            except:
+                ip = "ERR NO CONNECTION"
+                tnl_type = "HTTPS (no connection)"
             delete_last_line()
             print("NAME:  ", par_tnl)
             print("TYPE:  ", tnl_type)
