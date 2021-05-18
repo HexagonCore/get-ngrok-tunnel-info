@@ -15,12 +15,10 @@ ___
 
 ## Usage
 * ### Windows / macOS
-	Add to your script `import ngrok_info`
-** ** ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
+	Add to your script `import ngrok_info`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
 	
 * ### Linux
-	Add to your script `import ngrok_info`
- ** **‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
+	Add to your script `import ngrok_info`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
 
 ### ‎
 

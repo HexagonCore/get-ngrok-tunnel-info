@@ -10,7 +10,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.0.14"
+lvers = "1.0.15"
 
 
 def checkver():
@@ -33,9 +33,6 @@ def err_gtngr_do_not_use_for_urself():
 def gtngr_do_not_use_for_urself():
     url = "http://localhost:4040/api/tunnels/"
     tunnel_name = par_tnl
-    print(tunnel_name)
-    print(tunnel_name)
-    print(tunnel_name)
     
 
     delete_last_line()
@@ -101,7 +98,6 @@ def get(tnl_nm = "command_line"):
             print("ADRESS:", adress)
             print("IP:    ", ip)
             print("PORT:  ", port)
-            print("")
             
     if tcp == 0:
         try:
