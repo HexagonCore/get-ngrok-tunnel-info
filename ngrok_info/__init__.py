@@ -14,7 +14,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.0"
+lvers = "1.1.1"
 
 
 def checkver():
