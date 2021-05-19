@@ -17,7 +17,7 @@ notext = 0
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.3"
+lvers = "1.1.4"
 
 
 def checkver():
@@ -37,12 +37,12 @@ def err_gtngr_do_not_use_for_urself():
     delete_last_line()
     if notext == 0:
         print("Error: wrong tunnel name specified or no tunnel is running\n")
-    tnl_name = ERR
-    par_tnl = ERR
-    tnl_type = ERR
-    port = ERR
-    ip = ERR
-    adress = ERR
+    tnl_name = "ERR"
+    par_tnl = "ERR"
+    tnl_type = "ERR"
+    port = "ERR"
+    ip = "ERR"
+    adress = "ERR"
     notext = 0
     
 def gtngr_do_not_use_for_urself():
