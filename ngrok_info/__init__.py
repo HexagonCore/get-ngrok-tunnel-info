@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.12"
+lvers = "1.1.13"
 
 
 def checkver():
@@ -76,7 +76,6 @@ def gtfun(tnl_nm = "command_line"):
     global notext
     par_tnl = tnl_nm
     err = 0
-    print(notext)
     if notext == 0:
         print('Getting Ngrok stats from tunnel "{}"..'.format(par_tnl))
     ngr = gtngr_do_not_use_for_urself()
