@@ -27,7 +27,7 @@ ___
 	With https tunnel, you can acess `ngrok_info.tnl_name`, `ngrok_info.tnl_type`, `ngrok_info.adress` and `ngrok_info.ip`.
 	___
 	If you do not want output, but only variables, use `ngrok_info.get_notext()`
-	___
+	_
 	If you are using config file to specify tunnel preset, use `ngrok_info.get("TUNNEL_NAME_HERE_AND_KEEP_QUOTATION_MARKS_HERE")`.
 
 ### ‎
