@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.11"
+lvers = "1.1.12"
 
 
 def checkver():
@@ -27,7 +27,6 @@ def checkver():
 
 checkver()
 notext = 0
-
 #last line deletion
 def delete_last_line():
     pass
@@ -56,13 +55,13 @@ def gtngr_do_not_use_for_urself():
 
 def get_notext(tunnm = "command_line"):
     global notext
-    gtfun(tunnm)
     notext = 1
+    gtfun(tunnm)
     
 def get(tunnm = "command_line"):
     global notext
-    gtfun(tunnm)
     notext = 0
+    gtfun(tunnm)
 
 
 def gtfun(tnl_nm = "command_line"):
