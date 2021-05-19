@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.9"
+lvers = "1.1.10"
 
 
 def checkver():
@@ -150,6 +150,12 @@ def gtfun(tnl_nm = "command_line"):
     
 def err_gtngr_do_not_use_for_urself():
     global notext
+    global tnl_name
+    global par_tnl
+    global tnl_type
+    global port
+    global ip
+    global adress
     delete_last_line()
     if notext == 0:
         print("Error: wrong tunnel name specified or no tunnel is running\n")
