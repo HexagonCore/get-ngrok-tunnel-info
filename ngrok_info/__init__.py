@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.8"
+lvers = "1.1.9"
 
 
 def checkver():
@@ -139,7 +139,7 @@ def gtfun(tnl_nm = "command_line"):
                 tnl_type = "HTTPS (no connection)"
             delete_last_line()
             tnl_name = par_tnl
-            port = NONE
+            port = "NONE"
             if notext == 0:
                 print("NAME:  ", par_tnl)
                 print("TYPE:  ", tnl_type)
