@@ -8,8 +8,6 @@ import requests
 import os 
 import sys
 import time
-global notext
-notext = 0
 
 
 #!------------------------------!
@@ -17,10 +15,12 @@ notext = 0
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.4"
+lvers = "1.1.5"
 
 
 def checkver():
+    global notext
+    notext = 0
     packagenm = 'ngrok_info'
     responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
     latest_version = responseinfl.json()['info']['version']
