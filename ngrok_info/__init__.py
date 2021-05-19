@@ -8,13 +8,16 @@ import requests
 import os 
 import sys
 import time
+global notext
+notext = 0
+
 
 #!------------------------------!
 #! Start of getNGROK functions  !
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.2"
+lvers = "1.1.3"
 
 
 def checkver():
@@ -32,13 +35,15 @@ def delete_last_line():
 
 def err_gtngr_do_not_use_for_urself():
     delete_last_line()
-    print("Error: wrong tunnel name specified or no tunnel is running\n")
+    if notext == 0:
+        print("Error: wrong tunnel name specified or no tunnel is running\n")
     tnl_name = ERR
     par_tnl = ERR
     tnl_type = ERR
     port = ERR
     ip = ERR
     adress = ERR
+    notext = 0
     
 def gtngr_do_not_use_for_urself():
     url = "http://localhost:4040/api/tunnels/"
@@ -60,8 +65,16 @@ def gtngr_do_not_use_for_urself():
 
 
 
+def get_notext(tunnm = "command_line"):
+    gtfun(tunnm)
+    notext = 1
+    
+def get(tunnm = "command_line"):
+    gtfun(tunnm)
+    notext = 0
 
-def get(tnl_nm = "command_line"):
+
+def gtfun(tnl_nm = "command_line"):
     global ngr
     global err
     global tnl_type
@@ -72,7 +85,8 @@ def get(tnl_nm = "command_line"):
     global par_tnl
     par_tnl = tnl_nm
     err = 0
-    print('Getting Ngrok stats from tunnel "{}"..'.format(par_tnl))
+    if notext == 0:
+        print('Getting Ngrok stats from tunnel "{}"..'.format(par_tnl))
     ngr = gtngr_do_not_use_for_urself()
     tcp = 5
     try:
@@ -105,13 +119,14 @@ def get(tnl_nm = "command_line"):
                 tnl_type = "TCP (no connection)"
             delete_last_line()
             tnl_name = par_tnl
-            print("NAME:  ", par_tnl)
-            print("TYPE:  ", tnl_type)
-            print("ADRESS:", adress)
-            print("IP:    ", ip)
-            print("PORT:  ", port)
-            print("")
-            print("Variables, you can acess in your code and are for TCP are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip', 'ngrok_info.port'")
+            if notext == 0:
+                print("NAME:  ", par_tnl)
+                print("TYPE:  ", tnl_type)
+                print("ADRESS:", adress)
+                print("IP:    ", ip)
+                print("PORT:  ", port)
+                print("")
+                print("Variables, you can acess in your code and are for TCP are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip', 'ngrok_info.port'")
     if tcp == 0:
         try:
             ngr = ngr.replace("https://", "")
@@ -133,12 +148,13 @@ def get(tnl_nm = "command_line"):
             delete_last_line()
             tnl_name = par_tnl
             port = NONE
-            print("NAME:  ", par_tnl)
-            print("TYPE:  ", tnl_type)
-            print("ADRESS:", adress)
-            print("IP:    ", ip, "\n")
-            print("")
-            print("Variables, you can acess in your code and are for HTTPS are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip'")
+            if notext == 0:
+                print("NAME:  ", par_tnl)
+                print("TYPE:  ", tnl_type)
+                print("ADRESS:", adress)
+                print("IP:    ", ip, "\n")
+                print("")
+                print("Variables, you can acess in your code and are for HTTPS are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip'")
     
 
     

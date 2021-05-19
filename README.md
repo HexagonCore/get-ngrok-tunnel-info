@@ -15,14 +15,17 @@ ___
 
 ## Usage
 * ### Windows / macOS
-	Add to your script `import ngrok_info`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
+	Add this to your script: `import ngrok_info`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
 	
 * ### Linux
-	Add to your script `import ngrok_info`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
+	Add this to your script: `import ngrok_info`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
+	
+	Now, if you run it, you will see output with some info. If ngrok is not running on your computer, it will output error. After you run it, you can acess the info as variables too! If it is **TCP** tunnel, you can use `ngrok_info.tnl_name`, `ngrok_info.tnl_type`, `ngrok_info.adress`, `ngrok_info.ip` and `ngrok_info.port`. With https tunnel, you can acess `ngrok_info.tnl_name`, `ngrok_info.tnl_type`, `ngrok_info.adress` and `ngrok_info.ip`.
+	If you do not want output, but only variables, use `ngrok_info.get_notext()`
 
 ### ‎
 
-## Uninstall
+## Uninstallation
 * ### Windows / macOS
 	Run `python3 -m pip uninstall ngrok-info`
 	
@@ -39,4 +42,4 @@ ___
 
 Do you like this? Hit that ⭐!                                
 Use the star button as way to show us, that it works              
-Fork and pull requests are welcome of course
+Forks and pull requests are welcome of course
