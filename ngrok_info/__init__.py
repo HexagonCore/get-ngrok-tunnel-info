@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.7"
+lvers = "1.1.8"
 
 
 def checkver():
@@ -32,17 +32,7 @@ notext = 0
 def delete_last_line():
     pass
 
-def err_gtngr_do_not_use_for_urself():
-    delete_last_line()
-    if notext == 0:
-        print("Error: wrong tunnel name specified or no tunnel is running\n")
-    tnl_name = "ERR"
-    par_tnl = "ERR"
-    tnl_type = "ERR"
-    port = "ERR"
-    ip = "ERR"
-    adress = "ERR"
-    notext = 0
+
     
 def gtngr_do_not_use_for_urself():
     url = "http://localhost:4040/api/tunnels/"
@@ -158,6 +148,18 @@ def gtfun(tnl_nm = "command_line"):
                 print("")
                 print("Variables, you can acess in your code and are for HTTPS are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip'")
     
+def err_gtngr_do_not_use_for_urself():
+    global notext
+    delete_last_line()
+    if notext == 0:
+        print("Error: wrong tunnel name specified or no tunnel is running\n")
+    tnl_name = "ERR"
+    par_tnl = "ERR"
+    tnl_type = "ERR"
+    port = "ERR"
+    ip = "ERR"
+    adress = "ERR"
+    notext = 0
 
     
 #!------------------------------!
