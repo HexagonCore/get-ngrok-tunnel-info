@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.5"
+lvers = "1.1.6"
 
 
 def checkver():
@@ -66,10 +66,12 @@ def gtngr_do_not_use_for_urself():
 
 
 def get_notext(tunnm = "command_line"):
+    global notext
     gtfun(tunnm)
     notext = 1
     
 def get(tunnm = "command_line"):
+    global notext
     gtfun(tunnm)
     notext = 0
 
