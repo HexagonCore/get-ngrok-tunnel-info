@@ -15,12 +15,10 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.6"
+lvers = "1.1.7"
 
 
 def checkver():
-    global notext
-    notext = 0
     packagenm = 'ngrok_info'
     responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
     latest_version = responseinfl.json()['info']['version']
@@ -28,6 +26,7 @@ def checkver():
         print("You are not using latest version, run 'python3 -m pip install --upgrade ngrok_info' three times")
 
 checkver()
+notext = 0
 
 #last line deletion
 def delete_last_line():
@@ -85,6 +84,7 @@ def gtfun(tnl_nm = "command_line"):
     global port
     global adress
     global par_tnl
+    global notext
     par_tnl = tnl_nm
     err = 0
     if notext == 0:
