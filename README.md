@@ -1,4 +1,4 @@
-
+[![CodeFactor](https://www.codefactor.io/repository/github/hexagoncore/get-ngrok-tunnel-info/badge)](https://www.codefactor.io/repository/github/hexagoncore/get-ngrok-tunnel-info)
 
 # Get ngrok tunnel info
 Easy and fast tool written in **python 3** to get info about running ngrok tunnel. Supports **HTTPS** and **TCP**
