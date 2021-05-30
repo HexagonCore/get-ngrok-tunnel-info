@@ -1,5 +1,5 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/hexagoncore/get-ngrok-tunnel-info/badge)](https://www.codefactor.io/repository/github/hexagoncore/get-ngrok-tunnel-info)
-
+[](https://img.shields.io/github/license/HexagonCore/get-ngrok-tunnel-info)
 
 
 # Get ngrok tunnel info
@@ -14,7 +14,7 @@ ___
 * ### Linux
 	Run `python3 -m pip install ngrok_info`
 ### ‎
-
+to the
 ## Usage
 * ### Windows / macOS
 	Add this to your script: `import ngrok_info`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
