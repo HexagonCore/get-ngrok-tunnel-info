@@ -1,4 +1,4 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/hexagoncore/get-ngrok-tunnel-info/badge)](https://www.codefactor.io/repository/github/hexagoncore/get-ngrok-tunnel-info)
+[![CodeFactor](https://www.codefactor.io/repository/github/hexagoncore/get-ngrok-tunnel-info/badge)](#)
 [<img src="https://img.shields.io/github/license/HexagonCore/get-ngrok-tunnel-info">](#)
 
 
