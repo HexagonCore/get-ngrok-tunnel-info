@@ -3,6 +3,7 @@
 [<img src="https://img.shields.io/github/stars/HexagonCore/get-ngrok-tunnel-info">](#)
 [<img src="https://img.shields.io/github/forks/HexagonCore/get-ngrok-tunnel-info">](#)
 [<img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info">](#)
+![issues](https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info)
 
 
 # Get ngrok tunnel info
