@@ -1,12 +1,8 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/hexagoncore/get-ngrok-tunnel-info/badge)](#)
-[<img src="https://img.shields.io/github/license/HexagonCore/get-ngrok-tunnel-info">](#)
-[<img src="https://img.shields.io/github/stars/HexagonCore/get-ngrok-tunnel-info">](#)
-[<img src="https://img.shields.io/github/forks/HexagonCore/get-ngrok-tunnel-info">](#)
-[<img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info">](#)
-<p align="left">
-  <img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info" title="hover text">
-  <img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info" alt="accessibility text">
-</p>
+[![CodeFactor](https://www.codefactor.io/repository/github/hexagoncore/get-ngrok-tunnel-info/badge)](javascript:void(0);)
+[<img src="https://img.shields.io/github/license/HexagonCore/get-ngrok-tunnel-info">](javascript:void(0);)
+[<img src="https://img.shields.io/github/stars/HexagonCore/get-ngrok-tunnel-info">](javascript:void(0);)
+[<img src="https://img.shields.io/github/forks/HexagonCore/get-ngrok-tunnel-info">](javascript:void(0);)
+[<img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info">](javascript:void(0);)
 
 
 # Get ngrok tunnel info
