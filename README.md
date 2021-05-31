@@ -3,7 +3,7 @@
 [<img src="https://img.shields.io/github/stars/HexagonCore/get-ngrok-tunnel-info">](;)
 [<img src="https://img.shields.io/github/forks/HexagonCore/get-ngrok-tunnel-info">](;)
 [<img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info">](;)
-<img src="https://camo.githubusercontent.com/..." data-canonical-src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info" width="200" height="400" />
+<img src="https://camo.githubusercontent.com/..." data-canonical-src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info" />
 
 
 # Get ngrok tunnel info
