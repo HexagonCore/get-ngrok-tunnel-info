@@ -17,7 +17,7 @@ ___
 * ### Linux
 	Run `python3 -m pip install ngrok_info`
 ### ‎
-to the
+
 ## Usage
 * ### Windows / macOS / Linux
 	Add this to your script: `import ngrok_info`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
