@@ -21,7 +21,7 @@ to the
 ## Usage
 * ### Windows / macOS / Linux
 	Add this to your script: `import ngrok_info`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`ngrok_info.get()`
-	
+	 ‎
 	
 	Now, if you run it, you will see output with some **info**. If ngrok is not running on your computer, it will output error. After you run it, you can acess the info as variables too!
 	
