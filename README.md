@@ -4,8 +4,8 @@
 [<img src="https://img.shields.io/github/forks/HexagonCore/get-ngrok-tunnel-info">](#)
 [<img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info">](#)
 <p align="left">
-  <img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info" width="350" title="hover text">
-  <img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info" width="350" alt="accessibility text">
+  <img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info" title="hover text">
+  <img src="https://img.shields.io/github/issues/HexagonCore/get-ngrok-tunnel-info" alt="accessibility text">
 </p>
 
 
