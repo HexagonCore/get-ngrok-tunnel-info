@@ -1,7 +1,16 @@
 from setuptools import setup
+import re
+import ast
+
+
+_version_re = re.compile(r'__version__\s+=\s+(.*)')
+
+with open('ngrok_info/__init__.py', 'rb') as f:
+    version = str(ast.literal_eval(_version_re.search(
+        f.read().decode('utf-8')).group(1)))
 
 setup(name='ngrok_info',
-      version='1.1.15',
+      version=version,
       description='Easy and fast tool written in python 3 to get info about running ngrok tunnel',
       long_description=open('README.md').read(),
       long_description_content_type='text/markdown',

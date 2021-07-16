@@ -15,14 +15,15 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "1.1.15"
+
+__version__ = "develop"
 
 
 def checkver():
     packagenm = 'ngrok_info'
     responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
     latest_version = responseinfl.json()['info']['version']
-    if latest_version != lvers:
+    if latest_version != __version__:
         print("You are not using latest version, run 'python3 -m pip install --upgrade ngrok_info' three times")
 
 checkver()
