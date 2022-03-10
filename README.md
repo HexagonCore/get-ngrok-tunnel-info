@@ -10,7 +10,7 @@ Easy and fast tool written in **python 3** to get info about running ngrok tunne
 ___
 ### ‎
 
-## Instalation
+## Installation
 * ### Windows / macOS
 	Run `python3 -m pip install ngrok_info`
 	
