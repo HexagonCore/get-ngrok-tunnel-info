@@ -9,6 +9,10 @@ import os
 import sys
 import time
 
+global silent
+silent = True
+global updated
+updated = 0
 
 #!------------------------------!
 #! Start of getNGROK functions  !
@@ -18,10 +22,22 @@ import time
 
 __version__ = "develop"
 
+
+def allow_update():
+    global silent
+    global updated
+    silent = False
+    if updated == 0:
+        updated = 1
+        checkver()
+
+def not_silent():
+    global silent
+    global updated
+    allow_update()
+
 def online():
     try:
-        # connect to the host -- tells us if the host is actually
-        # reachable
         sock = socket.create_connection(("www.google.com", 80))
         if sock is not None:
             sock.close
@@ -32,14 +48,13 @@ def online():
 
 def checkver():
     if online() == True:
-        packagenm = 'ngrok_info'
+        packagenm = 'input_num'
         latest_version = "ERR"
         responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
         latest_version = responseinfl.json()['info']['version']
         if latest_version != __version__:
-            print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' THREE TIMES in normal terminal".format(packagenm))
-
-checkver()
+            if silent == False:
+                print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' TWO TIMES in normal terminal".format(packagenm))
 notext = 0
 #last line deletion
 def delete_last_line():
