@@ -35,6 +35,8 @@ ___
 
 	**⚠️** The `ngrok_info.get()` function does **not return** anything when executed! **⚠️**
 
+	Do you want to be reminded to update the package?
+	Run `input_num.allow_update()` RIGHT AFTER importing the package. 
 	
 ### ‎
 
