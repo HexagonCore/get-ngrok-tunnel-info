@@ -33,11 +33,9 @@ ___
 
 	With **https** tunnel, you can acess these variables: `ngrok_info.tnl_name`, `ngrok_info.tnl_type`, `ngrok_info.adress` and `ngrok_info.ip`.
 
-	If tunnel is **TCP**, you have access these variables: `ngrok_info.tnl_name`, `ngrok_info.tnl_type`, `ngrok_info.adress`, `ngrok_info.ip` and `ngrok_info.port`.
+	⚠️ The `ngrok_info.get()` function does not return anything when executed! ⚠️
 
 	
-        ⚠️ The `ngrok_info.get()` function does not return anything when executed! ⚠️
-
 ### ‎
 
 ## Uninstallation
