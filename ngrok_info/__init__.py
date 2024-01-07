@@ -70,7 +70,7 @@ def gtngr_do_not_use_for_urself():
         for i in res_json["tunnels"]:
             if i['name'] == tunnel_name:
                 return i['public_url']
-    except:
+    except Exception:
         err = True
         return None
 
@@ -111,13 +111,13 @@ def gtfun(tnl_nm="command_line"):
             tcp = 1
         else:
             tcp = 0
-    except:
+    except Exception:
         err_gtngr_do_not_use_for_urself()
 
     if tcp == 1:
         try:
             ngr = ngr.replace("tcp://", "")
-        except:
+        except Exception:
             err = True
             err_gtngr_do_not_use_for_urself()
         if not err:
@@ -127,7 +127,7 @@ def gtfun(tnl_nm="command_line"):
             tnl_type = "TCP"
             try:
                 ip = socket.gethostbyname(address)
-            except:
+            except Exception:
                 ip = "ERR NO CONNECTION"
                 tnl_type = "TCP (no connection)"
             tnl_name = par_tnl
@@ -142,7 +142,7 @@ def gtfun(tnl_nm="command_line"):
     if tcp == 0:
         try:
             ngr = ngr.replace("https://", "")
-        except:
+        except Exception:
             err = True
             err_gtngr_do_not_use_for_urself()
         if not err:
@@ -150,7 +150,7 @@ def gtfun(tnl_nm="command_line"):
             tnl_type = "HTTPS"
             try:
                 ip = socket.gethostbyname(address)
-            except:
+            except Exception:
                 ip = "ERR NO CONNECTION"
                 tnl_type = "HTTPS (no connection)"
             tnl_name = par_tnl
