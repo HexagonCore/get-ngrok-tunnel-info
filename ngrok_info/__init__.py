@@ -5,20 +5,16 @@
 import socket
 import json
 import requests
-import os 
-import sys
-import time
 
-global silent
+# JAN/7/2024
+# Ok so this code is absolutely terrible and relies on the global keyword but it works so let's not change it
+
 silent = True
-global updated
-updated = 0
+updated = False
 
 #!------------------------------!
 #! Start of getNGROK functions  !
-#!                              !
 #!------------------------------!
-
 
 __version__ = "develop"
 
@@ -27,73 +23,71 @@ def allow_update():
     global silent
     global updated
     silent = False
-    if updated == 0:
-        updated = 1
+    if updated == False:
+        updated = True
         checkver()
 
+
 def not_silent():
-    global silent
-    global updated
     allow_update()
 
-def online():
+
+def is_online():
     try:
         sock = socket.create_connection(("www.google.com", 80))
         if sock is not None:
-            sock.close
+            sock.close()
         return True
     except OSError:
         pass
     return False
 
+
 def checkver():
-    if online() == True:
+    if is_online() == True:
         packagenm = 'input_num'
         latest_version = "ERR"
         responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
         latest_version = responseinfl.json()['info']['version']
         if latest_version != __version__:
             if silent == False:
-                print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' TWO TIMES in normal terminal".format(packagenm))
-notext = 0
-#last line deletion
-def delete_last_line():
-    pass
+                print(
+                    f"[{packagenm}] New update is here, run 'python3 -m pip install --upgrade input_num' TWO TIMES in normal terminal")
 
 
-    
+notext = False
+
+
 def gtngr_do_not_use_for_urself():
+    global err
     url = "http://localhost:4040/api/tunnels/"
     tunnel_name = par_tnl
-    
 
-    delete_last_line()
     try:
         res = requests.get(url)
         res_unicode = res.content.decode("utf-8")
         res_json = json.loads(res_unicode)
         for i in res_json["tunnels"]:
             if i['name'] == tunnel_name:
-                delete_last_line()
                 return i['public_url']
-                break
     except:
-        err = 1
+        err = True
+        return None
 
 
-
-def get_notext(tunnm = "command_line"):
+def get_notext(tunnm="command_line"):
     global notext
-    notext = 1
-    gtfun(tunnm)
-    
-def get(tunnm = "command_line"):
-    global notext
-    notext = 0
+    notext = True
     gtfun(tunnm)
 
 
-def gtfun(tnl_nm = "command_line"):
+def get(tunnm="command_line"):
+    global notext
+    notext = False
+    gtfun(tunnm)
+
+
+def gtfun(tnl_nm="command_line"):
     global ngr
     global err
     global tnl_type
@@ -101,81 +95,78 @@ def gtfun(tnl_nm = "command_line"):
     global ip
     global port
     global adress
+    global address
     global par_tnl
     global notext
     par_tnl = tnl_nm
-    err = 0
-    if notext == 0:
+    err = False
+    if notext == False:
         print('Getting Ngrok stats from tunnel "{}"..'.format(par_tnl))
+
     ngr = gtngr_do_not_use_for_urself()
-    tcp = 5
+
+    # if err:
+    #     err_gtngr_do_not_use_for_urself()
+
+    tcp = -1
     try:
-        if ngr.find("tcp://") != -1:
+        if "tcp://" in ngr:
             tcp = 1
         else:
             tcp = 0
     except:
         err_gtngr_do_not_use_for_urself()
-    
+
     if tcp == 1:
         try:
             ngr = ngr.replace("tcp://", "")
         except:
-            err = 1
+            err = True
             err_gtngr_do_not_use_for_urself()
-            adress = "ERR"
-            ip = "ERR"
-            port = "ERR"
-            tnl_type = "ERR"
-        if err == 0:
+        if not err:
             ngr = ngr.split(":")
-            adress = ngr[0]
+            adress = address = ngr[0]
             port = ngr[1]
             tnl_type = "TCP"
             try:
-                ip = socket.gethostbyname(adress)
+                ip = socket.gethostbyname(address)
             except:
                 ip = "ERR NO CONNECTION"
                 tnl_type = "TCP (no connection)"
-            delete_last_line()
             tnl_name = par_tnl
-            if notext == 0:
-                print("NAME:  ", par_tnl)
-                print("TYPE:  ", tnl_type)
-                print("ADRESS:", adress)
-                print("IP:    ", ip)
-                print("PORT:  ", port)
+            if notext == False:
+                print("NAME:   ", par_tnl)
+                print("TYPE:   ", tnl_type)
+                print("ADDRESS:", address)
+                print("IP:     ", ip)
+                print("PORT:   ", port)
                 print("")
-                print("Variables, you can acess in your code and are for TCP are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip', 'ngrok_info.port'")
+                print("Variables, you can acess in your code and are for TCP are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.address', 'ngrok_info.ip', 'ngrok_info.port'")
     if tcp == 0:
         try:
             ngr = ngr.replace("https://", "")
         except:
-            err = 1
+            err = True
             err_gtngr_do_not_use_for_urself()
-            adress = "ERR"
-            ip = "ERR"
-            port = "ERR"
-            tnl_type = "ERR"
-        if err == 0:
-            adress = ngr
+        if not err:
+            adress = address = ngr
             tnl_type = "HTTPS"
             try:
-                ip = socket.gethostbyname(adress)
+                ip = socket.gethostbyname(address)
             except:
                 ip = "ERR NO CONNECTION"
                 tnl_type = "HTTPS (no connection)"
-            delete_last_line()
             tnl_name = par_tnl
-            port = "NONE"
-            if notext == 0:
-                print("NAME:  ", par_tnl)
-                print("TYPE:  ", tnl_type)
-                print("ADRESS:", adress)
-                print("IP:    ", ip, "\n")
+            port = None
+            if notext == False:
+                print("NAME:   ", par_tnl)
+                print("TYPE:   ", tnl_type)
+                print("ADDRESS:", address)
+                print("IP:     ", ip)
                 print("")
-                print("Variables, you can acess in your code and are for HTTPS are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip'")
-    
+                print("Variables, you can acess in your code and are for HTTPS are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.address', 'ngrok_info.ip'")
+
+
 def err_gtngr_do_not_use_for_urself():
     global notext
     global tnl_name
@@ -184,20 +175,13 @@ def err_gtngr_do_not_use_for_urself():
     global port
     global ip
     global adress
-    delete_last_line()
-    if notext == 0:
+    global address
+    if notext == False:
         print("Error: wrong tunnel name specified or no tunnel is running\n")
-    tnl_name = "ERR"
-    par_tnl = "ERR"
-    tnl_type = "ERR"
-    port = "ERR"
-    ip = "ERR"
-    adress = "ERR"
-    notext = 0
+    tnl_name = par_tnl = tnl_type = port = ip = adress = address = "ERR"
+    notext = False
 
-    
+
 #!------------------------------!
 #!       End of getNGROK        !
-#!                              !
 #!------------------------------!
-
