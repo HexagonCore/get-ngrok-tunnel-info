@@ -105,9 +105,6 @@ def gtfun(tnl_nm="command_line"):
 
     ngr = gtngr_do_not_use_for_urself()
 
-    # if err:
-    #     err_gtngr_do_not_use_for_urself()
-
     tcp = -1
     try:
         if "tcp://" in ngr:
