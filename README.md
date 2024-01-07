@@ -34,7 +34,7 @@ ___
 
 	With **https** tunnel, you can acess these variables: `ngrok_info.tnl_name`, `ngrok_info.tnl_type`, `ngrok_info.address` and `ngrok_info.ip`.
 
-	**⚠️** The `ngrok_info.get()` and `ngrok_info.get_notext()` function do **not return** anything when executed! **⚠️**
+	**⚠️** The `ngrok_info.get()` and `ngrok_info.get_notext()` functions do **not return** anything when executed! **⚠️**
 
 	Do you want to be reminded to update the package?
 	Run `ngrok_info.allow_update()` RIGHT AFTER importing the package. 
