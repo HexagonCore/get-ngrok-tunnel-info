@@ -5,7 +5,7 @@
 import socket
 import json
 import requests
-import os 
+import os
 import sys
 import time
 
@@ -31,10 +31,12 @@ def allow_update():
         updated = 1
         checkver()
 
+
 def not_silent():
     global silent
     global updated
     allow_update()
+
 
 def online():
     try:
@@ -46,6 +48,7 @@ def online():
         pass
     return False
 
+
 def checkver():
     if online() == True:
         packagenm = 'input_num'
@@ -55,17 +58,19 @@ def checkver():
         if latest_version != __version__:
             if silent == False:
                 print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' TWO TIMES in normal terminal".format(packagenm))
+
+
 notext = 0
-#last line deletion
+# last line deletion
+
+
 def delete_last_line():
     pass
 
 
-    
 def gtngr_do_not_use_for_urself():
     url = "http://localhost:4040/api/tunnels/"
     tunnel_name = par_tnl
-    
 
     delete_last_line()
     try:
@@ -81,19 +86,19 @@ def gtngr_do_not_use_for_urself():
         err = 1
 
 
-
-def get_notext(tunnm = "command_line"):
+def get_notext(tunnm="command_line"):
     global notext
     notext = 1
     gtfun(tunnm)
-    
-def get(tunnm = "command_line"):
+
+
+def get(tunnm="command_line"):
     global notext
     notext = 0
     gtfun(tunnm)
 
 
-def gtfun(tnl_nm = "command_line"):
+def gtfun(tnl_nm="command_line"):
     global ngr
     global err
     global tnl_type
@@ -116,7 +121,7 @@ def gtfun(tnl_nm = "command_line"):
             tcp = 0
     except Exception:
         err_gtngr_do_not_use_for_urself()
-    
+
     if tcp == 1:
         try:
             ngr = ngr.replace("tcp://", "")
@@ -175,7 +180,8 @@ def gtfun(tnl_nm = "command_line"):
                 print("IP:    ", ip, "\n")
                 print("")
                 print("Variables, you can acess in your code and are for HTTPS are: 'ngrok_info.tnl_name', 'ngrok_info.tnl_type', 'ngrok_info.adress', 'ngrok_info.ip'")
-    
+
+
 def err_gtngr_do_not_use_for_urself():
     global notext
     global tnl_name
@@ -195,9 +201,8 @@ def err_gtngr_do_not_use_for_urself():
     adress = "ERR"
     notext = 0
 
-    
+
 #!------------------------------!
 #!       End of getNGROK        !
 #!                              !
 #!------------------------------!
-
