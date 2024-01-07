@@ -77,7 +77,7 @@ def gtngr_do_not_use_for_urself():
                 delete_last_line()
                 return i['public_url']
                 break
-    except:
+    except Exception:
         err = 1
 
 
@@ -114,13 +114,13 @@ def gtfun(tnl_nm = "command_line"):
             tcp = 1
         else:
             tcp = 0
-    except:
+    except Exception:
         err_gtngr_do_not_use_for_urself()
     
     if tcp == 1:
         try:
             ngr = ngr.replace("tcp://", "")
-        except:
+        except Exception:
             err = 1
             err_gtngr_do_not_use_for_urself()
             adress = "ERR"
@@ -134,7 +134,7 @@ def gtfun(tnl_nm = "command_line"):
             tnl_type = "TCP"
             try:
                 ip = socket.gethostbyname(adress)
-            except:
+            except Exception:
                 ip = "ERR NO CONNECTION"
                 tnl_type = "TCP (no connection)"
             delete_last_line()
@@ -150,7 +150,7 @@ def gtfun(tnl_nm = "command_line"):
     if tcp == 0:
         try:
             ngr = ngr.replace("https://", "")
-        except:
+        except Exception:
             err = 1
             err_gtngr_do_not_use_for_urself()
             adress = "ERR"
@@ -162,7 +162,7 @@ def gtfun(tnl_nm = "command_line"):
             tnl_type = "HTTPS"
             try:
                 ip = socket.gethostbyname(adress)
-            except:
+            except Exception:
                 ip = "ERR NO CONNECTION"
                 tnl_type = "HTTPS (no connection)"
             delete_last_line()
